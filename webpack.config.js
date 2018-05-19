@@ -2,11 +2,13 @@ const path = require('path');
 require('babel-register');
 
 module.exports = {
-  entry: {},
+  entry: {
+    usersStore: './src/users/store.js',
+  },
   output: {
     filename: '[name].js',
     libraryTarget: 'commonjs2',
-    path: path.resolve(__dirname, 'dist/build'),
+    path: path.resolve(__dirname, 'build/Release'),
   },
   module: {
     loaders: [

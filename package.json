@@ -1,10 +1,16 @@
 {
   "name": "aws-lambda-authentication",
   "version": "1.0.0",
+  "author": "Shubham Patel",
+  "license": "MIT",
   "description": "",
   "main": "index.js",
   "engines": {
     "node": ">=6.10.0"
+  },
+  "scripts": {
+    "eslint": "node_modules/.bin/eslint ./tests/.",
+    "build": "yarn eslint && node_modules/.bin/webpack"
   },
   "dependencies": {
     "ajv": "^5.2.3",
@@ -29,12 +35,14 @@
     "pre-commit": "^1.2.2",
     "webpack": "^2.2.1"
   },
+  "precommit.silent": true,
+  "pre-commit": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pentestershubham/AWS-Lambda-Authentication.git"
   },
-  "author": "Shubham Patel",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pentestershubham/AWS-Lambda-Authentication/issues"
   },
